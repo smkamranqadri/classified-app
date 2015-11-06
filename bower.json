@@ -1,0 +1,18 @@
+{
+  "name": "classified-app",
+  "version": "1.0.0",
+  "homepage": "https://github.com/smkamranqadri/classified-app",
+  "authors": [
+    "Muhammad Kamran <smkamranqadri@yahoo.com>"
+  ],
+  "description": "Mean Stack Application via Typescript",
+  "main": "server.js",
+  "moduleType": [],
+  "keywords": [
+    "Mongod",
+    "Expressjs",
+    "Angularjs",
+    "Nodejs"
+  ],
+  "license": "MIT"
+}

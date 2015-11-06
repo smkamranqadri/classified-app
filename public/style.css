@@ -1,0 +1,33 @@
+.logo {
+	width: 32px;
+	height: 32px;
+	margin-right: 20px;
+}
+
+.body {
+	font-family: Roboto,'Helvetica Neue',sans-serif;
+}
+
+.orderCard {
+	padding: 0px;
+	margin: 20px;
+}
+
+.orderCard > h3, h4, h5 {
+	padding: 0px 10px;
+	margin: 0px;
+}
+
+.backSkyBlue {
+	background-color: #00A7F8 !important;
+}
+
+.foreWhite {
+	color: white;
+}
+
+.fabAbsolute {
+	position: absolute !important;
+	top: 50%;
+	right: 5%;
+}

@@ -1,0 +1,32 @@
+{
+  "name": "classified-app",
+  "version": "1.0.0",
+  "description": "Mean Stack Application via Typescript",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/smkamranqadri/classified-app.git"
+  },
+  "keywords": [
+    "Mongodb",
+    "Expressjs",
+    "Angularjs",
+    "Nodejs"
+  ],
+  "author": "Muhammad Kamran <smkamranqadri@yahoo.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/smkamranqadri/classified-app/issues"
+  },
+  "homepage": "https://github.com/smkamranqadri/classified-app#readme",
+  "dependencies": {
+    "body-parser": "^1.14.1",
+    "cookie-parser": "^1.4.0",
+    "express": "^4.13.3",
+    "mongoose": "^4.2.3",
+    "morgan": "^1.6.1"
+  }
+}

@@ -1,0 +1,29 @@
+<md-toolbar layout="row" class="md-whiteframe-z2">
+	<div class="md-toolbar-tools">
+		<img src="images/logo.svg" alt="logo" class="logo">
+		<h1>Classified Application</h1>
+		<md-button class="md-fab fabAbsolute" ng-click="showNewPost($event)" aria-label="New Post Dialog">
+			<md-icon md-svg-src="images/ic_add_black_24px.svg"></md-icon>
+		</md-button>
+	</div>
+</md-toolbar><md-content layout="column" layout-margin>
+	<div flex>
+		<md-input-container flex-gt-sm="33" layout-align-gt-sm="center center">
+			<label>Search...</label>
+			<input type="text" ng-model="search">
+		</md-input-container>
+	</div>
+	<div flex>
+		<md-button ng-repeat="order in orders | filter:search" class="orderCard md-whiteframe-z2" ng-click="selectOrder(order); showEditOrder($event)">
+			<md-toolbar class="md-toolbar-tools backSkyBlue">
+				<h4>SC: {{order.sc}}</h3>
+				<span flex></span>
+			    <md-button class="md-icon-button foreWhite" ng-click="deleteOrder(order)" layout="end center" aria-label="Delete Order">
+			      <md-icon md-svg-src="img/ic_delete_black_24px.svg"></md-icon>
+			    </md-button>
+			</md-toolbar>
+			<h3>Customer: {{order.cus}}</h2>
+			<h5>Customer PO: {{order.cpo}}</h4>
+		</md-button>
+	</div>
+</md-content>
