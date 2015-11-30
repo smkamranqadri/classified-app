@@ -1,3 +1,16 @@
+.margin-right {
+	margin-right: 20px;
+}
+
+.viewHeight {
+	height: 100vh;
+}
+
+.invalid_color {
+	color: red;
+	font-size: 12px;
+}
+
 .logo {
 	width: 32px;
 	height: 32px;
@@ -8,14 +21,12 @@
 	font-family: Roboto,'Helvetica Neue',sans-serif;
 }
 
-.orderCard {
-	padding: 0px;
-	margin: 20px;
+.nomargin {
+	margin: 0px;
 }
 
-.orderCard > h3, h4, h5 {
-	padding: 0px 10px;
-	margin: 0px;
+.nopadding {
+	padding: 0px;
 }
 
 .backSkyBlue {
@@ -28,6 +39,6 @@
 
 .fabAbsolute {
 	position: absolute !important;
-	top: 50%;
-	right: 5%;
+	bottom: 5%;
+	right: 2%;
 }

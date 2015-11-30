@@ -28,5 +28,11 @@
     "express": "^4.13.3",
     "mongoose": "^4.2.3",
     "morgan": "^1.6.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-nodemon": "^2.0.4",
+    "gulp-rimraf": "^0.2.0",
+    "gulp-typescript": "^2.9.2"
   }
 }

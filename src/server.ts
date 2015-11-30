@@ -10,8 +10,13 @@ import * as mongoose     from "mongoose";
 
 //server configuration
 let app   : express.Express = express();
-let port  : number          = process.env.PORT || 3000;
+let port  : number          = process.env.PORT || 3500;
 mongoose.connect('mongodb://localhost/classified-app');
+
+//custom module import
+// let userRouter: express.Router = require('./modules/user/userRoute');
+import userRouter = require('./modules/user/userRoute');
+import postRouter = require('./modules/post/postRoute');
 
 //builtin middleware
 app.use(express.static(path.join(__dirname, '../public')));
@@ -21,6 +26,10 @@ app.use(morgan('dev'));
 app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+
+//customer mounted middleware for routing
+app.use('/user', userRouter);
+app.use('/post', postRouter);
 
 //start server
 app.listen(port, () => {

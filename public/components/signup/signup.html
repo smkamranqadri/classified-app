@@ -1,0 +1,31 @@
+<md-content layout="column" layout-margin layout-align-gt-sm="center center" ng-hide="signup.registered">
+    <md-card class="md-padding">
+     <md-card-content>
+       <h2>Signup</h2>
+       <form novalidate>
+           <md-input-container>
+    			<label>User Name</label>
+    			<input type="text" ng-model="signup.user.userName">
+    		</md-input-container>
+    		<md-input-container>
+    			<label>Password</label>
+    			<input type="password" ng-model="signup.user.passWord">
+    		</md-input-container>
+        <p ng-show="signup.error">{{signup.error}}</p>
+		</form>
+     </md-card-content>
+     <md-card-actions layout="row" layout-align="end center">
+       <md-button class="md-primary md-raised" ng-click="signup.signup()">Signup</md-button>
+     </md-card-actions>
+    </md-card>
+</md-content>
+<md-content layout="column" layout-margin layout-align-gt-sm="center center" ng-show="signup.registered">
+    <md-card class="md-padding">
+     <md-card-content>
+       <h2>Registered Successfully...</h2>
+     </md-card-content>
+     <md-card-actions layout="row" layout-align="end center">
+       <md-button class="md-primary md-raised" ng-click="signup.signin()">Signin</md-button>
+     </md-card-actions>
+    </md-card>
+</md-content>

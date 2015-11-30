@@ -1,0 +1,41 @@
+<md-content layout="column" layout-margin layout-align-gt-sm="center center">
+    <md-card class="md-padding">
+     <md-card-content>
+       <h2>New Post</h2>
+       <form name="newPostForm" novalidate>
+           <md-input-container>
+    			<label>Title</label>
+    			<input type="text" name="title" ng-model="newpost.post.title" ng-required="true">
+    		</md-input-container>
+        <div ng-show="newPostForm.title.$dirty">
+          <p ng-show="newPostForm.title.$error.required" class="invalid_color">Title is Required...</p>
+    		</div>
+        <md-input-container>
+    			<label>Description</label>
+    			<input type="text" name="description" ng-model="newpost.post.description" ng-required="true">
+    		</md-input-container>
+        <div ng-show="newPostForm.description.$dirty">
+          <p ng-show="newPostForm.description.$error.required" class="invalid_color">Description is Required...</p>
+        </div>
+        <md-input-container>
+          <label>Price</label>
+          <input type="text" name="price" ng-model="newpost.post.price" ng-required="true">
+        </md-input-container>
+        <div ng-show="newPostForm.price.$dirty">
+          <p ng-show="newPostForm.price.$error.required" class="invalid_color">Price is Required...</p>
+        </div>
+        <!-- <md-input-container>
+          <label>Image</label>
+          <input type="file" name="image" ng-model="newpost.post.image" ng-required="true">
+        </md-input-container>
+        <div ng-show="newPostForm.image.$dirty">
+          <p ng-show="newPostForm.image.$error.required" class="invalid_color">Image is Required... </p>
+        </div> -->
+        <p ng-show="newpost.error">{{newpost.error}}</p>
+		</form>
+     </md-card-content>
+     <md-card-actions layout="row" layout-align="end center">
+       <md-button class="md-primary md-raised" ng-disabled="newPostForm.$invalid" ng-click="newpost.submitPost()">Submit Posts</md-button>
+     </md-card-actions>
+    </md-card>
+</md-content>

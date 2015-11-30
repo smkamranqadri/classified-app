@@ -1,0 +1,22 @@
+<md-content layout="column" layout-margin layout-align-gt-sm="center center">
+    <md-card class="md-padding">
+     <md-card-content>
+       <h2>Signin</h2>
+       <form novalidate>
+           <md-input-container>
+    			<label>User Name</label>
+    			<input type="text" ng-model="signin.user.userName">
+    		</md-input-container>
+    		<md-input-container>
+    			<label>Password</label>
+    			<input type="password" ng-model="signin.user.passWord">
+    		</md-input-container>
+        <p ng-show="signin.error">{{signin.error}}</p>
+		</form>
+     </md-card-content>
+     <md-card-actions layout="row" layout-align="end center">
+       <md-button class="md-primary md-raised" ng-click="signin.signin()">Signin</md-button>
+     </md-card-actions>
+    </md-card>
+</md-content>
+{{ signin.user1 | json}}
