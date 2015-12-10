@@ -1,0 +1,16 @@
+<md-toolbar layout="row" class="md-whiteframe-z2 backSkyBlue">
+    <div class="md-toolbar-tools" layout="row" layout-align="space-between center">
+        <div layout="row" layout-align="center center">
+            <a ng-link="/"><img src="images/logo.svg" alt="logo" class="logo"></a>
+            <a ng-link="/"><h1>Classified Application</h1></a>
+        </div>
+        <div layout="row" layout-align="center center">
+            <div class="margin-right" ng-show="navtoolbar.user.userName">
+                User: {{navtoolbar.user.userName}}
+            </div>
+            <md-button class="md-raised" ng-hide="navtoolbar.user.userName" ui-sref="signin" aria-label="Signin">Signin</md-button>
+            <md-button class="md-raised" ng-hide="navtoolbar.user.userName" ui-sref="signup" aria-label="Signup">Signup</md-button>
+            <md-button class="md-raised md-hue-1" ng-show="navtoolbar.user.userName" ng-click="navtoolbar.signout()" aria-label="Signout">Signout</md-button>
+        </div>
+    </div>
+</md-toolbar>

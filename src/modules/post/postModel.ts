@@ -16,8 +16,22 @@ let postSchema: mongoose.Schema = new mongoose.Schema({
 		required: true
 	},
 	image: {
-		type: String,
-		required: true
+		filetype: {
+			type: String,
+			required: true
+		},
+		filename: {
+			type: String,
+			required: true
+		},
+		filesize: {
+			type: String,
+			required: true
+		},
+		base64: {
+			type: String,
+			required: true
+		}	
 	}
 });
 
@@ -25,7 +39,12 @@ export interface IPost extends mongoose.Document {
 	title: string,
 	description: string,
 	price: string,
-	image: string
+	image: {
+		filetype: string,
+		filename: string,
+		filesize: string,
+		base64: buffer
+	}
 }
 
 export let Post: mongoose.Model<IPost> = mongoose.model<IPost>('Post', postSchema);

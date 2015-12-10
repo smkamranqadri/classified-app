@@ -14,8 +14,22 @@ var postSchema = new mongoose.Schema({
         required: true
     },
     image: {
-        type: String,
-        required: true
+        filetype: {
+            type: String,
+            required: true
+        },
+        filename: {
+            type: String,
+            required: true
+        },
+        filesize: {
+            type: String,
+            required: true
+        },
+        base64: {
+            type: String,
+            required: true
+        }
     }
 });
 exports.Post = mongoose.model('Post', postSchema);

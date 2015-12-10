@@ -19,8 +19,8 @@ app.use(express.static(path.join(__dirname, '../public')));
 //third party middleware
 app.use(morgan('dev'));
 app.use(cookieParser());
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json({ limit: '500kb' }));
+app.use(bodyParser.urlencoded({ extended: false, limit: '500kb' }));
 //customer mounted middleware for routing
 app.use('/user', userRouter);
 app.use('/post', postRouter);

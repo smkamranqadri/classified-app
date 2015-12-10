@@ -19,6 +19,7 @@
     "angular": "~1.4.7",
     "angular-material": "~0.11.4",
     "ngstorage": "~0.3.10",
-    "angular-route": "~1.4.8"
+    "angular-base64-upload": "~0.1.13",
+    "angular-ui-router": "~0.2.15"
   }
 }

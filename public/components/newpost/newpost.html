@@ -5,32 +5,33 @@
        <form name="newPostForm" novalidate>
            <md-input-container>
     			<label>Title</label>
-    			<input type="text" name="title" ng-model="newpost.post.title" ng-required="true">
+    			<input type="text" name="title" ng-model="newpost.post.title" ng-required="true" autofocus>
     		</md-input-container>
-        <div ng-show="newPostForm.title.$dirty">
+        <div ng-show="newPostForm.title.$touched">
           <p ng-show="newPostForm.title.$error.required" class="invalid_color">Title is Required...</p>
     		</div>
         <md-input-container>
     			<label>Description</label>
     			<input type="text" name="description" ng-model="newpost.post.description" ng-required="true">
     		</md-input-container>
-        <div ng-show="newPostForm.description.$dirty">
+        <div ng-show="newPostForm.description.$touched">
           <p ng-show="newPostForm.description.$error.required" class="invalid_color">Description is Required...</p>
         </div>
         <md-input-container>
           <label>Price</label>
           <input type="text" name="price" ng-model="newpost.post.price" ng-required="true">
         </md-input-container>
-        <div ng-show="newPostForm.price.$dirty">
+        <div ng-show="newPostForm.price.$touched">
           <p ng-show="newPostForm.price.$error.required" class="invalid_color">Price is Required...</p>
         </div>
-        <!-- <md-input-container>
+        <md-input-container>
           <label>Image</label>
-          <input type="file" name="image" ng-model="newpost.post.image" ng-required="true">
+          <input type="file" name="image" ng-model="newpost.post.image" base-sixty-four-input accept="image/*" maxsize="500"  ng-required="true">
         </md-input-container>
-        <div ng-show="newPostForm.image.$dirty">
-          <p ng-show="newPostForm.image.$error.required" class="invalid_color">Image is Required... </p>
-        </div> -->
+        <div ng-show="newPostForm.image.$touched">
+          <p ng-show="newPostForm.image.$error.required" class="invalid_color">Image is Required...</p>
+          <p ng-show="newPostForm.image.$error.maxsize" class="invalid_color">Image size must not exceed 500 KB...</p>
+        </div>
         <p ng-show="newpost.error">{{newpost.error}}</p>
 		</form>
      </md-card-content>

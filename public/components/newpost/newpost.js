@@ -7,7 +7,7 @@
   		if (!userFactory.user.userName) {
 			$location.path('/signin');
   		}
-  		_self.post = { title: '', description: '', price: '', image: 'image' };
+  		_self.post = { title: '', description: '', price: '', image: {filetype: '', filename: '', filesize: '', base64: ''} };
   		_self.error = '';
   		_self.submitPost = function (){
   			$http.post('/post/newpost', _self.post).then(function(response){

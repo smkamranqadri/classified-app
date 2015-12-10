@@ -6,8 +6,8 @@
   		_self = this;
   		_self.user = userFactory.user;
   		_self.posts = [];
-		$http.get('/post/posts').then(function(response){
-			_self.posts = response.data;
-		});
+		  $http.get('/post/posts').then(function(response){
+			   _self.posts = response.data;
+		  });
   	}
 })();

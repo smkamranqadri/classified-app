@@ -1,5 +1,10 @@
-.margin-right {
+.marginRight20px {
 	margin-right: 20px;
+}
+
+.iconSize {
+	width: 32px;
+	height: 32px;
 }
 
 .viewHeight {
@@ -9,16 +14,6 @@
 .invalid_color {
 	color: red;
 	font-size: 12px;
-}
-
-.logo {
-	width: 32px;
-	height: 32px;
-	margin-right: 20px;
-}
-
-.body {
-	font-family: Roboto,'Helvetica Neue',sans-serif;
 }
 
 .nomargin {
@@ -41,4 +36,8 @@
 	position: absolute !important;
 	bottom: 5%;
 	right: 2%;
+}
+
+.body {
+	font-family: Roboto,'Helvetica Neue',sans-serif;
 }

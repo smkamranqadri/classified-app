@@ -7,7 +7,7 @@
 	</div>
 	<div layout="column">
 		<md-card class="md-whiteframe-z2" ng-repeat="post in home.posts | filter:search">
-			<!-- <img class="md-card-image" src="card-image.png" alt="post image"> -->
+			<img class="md-card-image logo" ng-src="data:{{post.image.filetype}};base64,{{post.image.base64}}"  alt="post image">
 			<md-card-content>
 				<h2 class="backSkyBlue nomargin nopadding">Title: {{post.title}}</h2>
 				<p>Description: {{post.description}}</p>
@@ -21,20 +21,6 @@
 			 </div>
 		</md-card>
 	</div>
-<!-- 
-	<div flex>
-		<md-button ng-repeat="post in home.posts | filter:search" class="nomargin md-whiteframe-z2" ng-click="selectOrder(order); showEditOrder($event)">
-			<md-toolbar class="md-toolbar-tools backSkyBlue">
-				{{post.title}}
-				<span flex></span>
-			    <md-button class="md-icon-button foreWhite" ng-click="deleteOrder(order)" layout="end center" aria-label="Delete Order">
-			      <md-icon md-svg-src="img/ic_delete_black_24px.svg"></md-icon>
-			    </md-button>
-			</md-toolbar>
-			<h3>Customer: {{post.description}}</h2>
-			<h5>Customer PO: {{post.price}}</h4>
-		</md-button>
-	</div> -->
 </md-content>
 <md-button class="md-fab fabAbsolute" href="#/newpost" aria-label="New Post Dialog" ng-show="home.user.userName">
     <md-icon md-svg-src="images/ic_add_black_24px.svg"></md-icon>

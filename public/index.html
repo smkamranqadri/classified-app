@@ -7,44 +7,25 @@
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Classified Application</title>
     <!-- Angular -->
     <link rel="stylesheet" href="vendors/angular-material/angular-material.min.css">
-    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic"> -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=RobotoDraft:300,400,500,700,400italic">
     <!--Custome-->
-    <link rel="stylesheet" href="style.css">
-    <title>Classified Application</title>
+    <link rel="stylesheet" href="main.css">
 </head>
 <body layout="column" ng-app="classifiedApp" ng-controller="AppController as app">
-    <md-toolbar layout="row" class="md-whiteframe-z2 backSkyBlue">
-        <div class="md-toolbar-tools" layout="row" layout-align="space-between center">
-            <div layout="row" layout-align="center center">
-                <a ng-link="/"><img src="images/logo.svg" alt="logo" class="logo"></a>
-                <a ng-link="/"><h1>Classified Application</h1></a>
-            </div>
-            <div layout="row" layout-align="center center">
-                <div class="margin-right" ng-show="app.user.userName">
-                    User: {{app.user.userName}}
-                </div>
-                <md-button class="md-raised" ng-hide="app.user.userName" href="#/signin" aria-label="Signin">Signin</md-button>
-                <md-button class="md-raised" ng-hide="app.user.userName" href="#/signup" aria-label="Signup">Signup</md-button>
-                <md-button class="md-raised md-hue-1" ng-show="app.user.userName" ng-click="app.signout()" aria-label="Signout">Signout</md-button>
-            </div>
-        </div>
-    </md-toolbar>
+    
     <ng-view></ng-view>
 	<!-- Angular -->
     <script src="vendors/angular/angular.min.js"></script>
-    <!-- // <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-beta.1/angular.min.js"></script> -->
-    <!-- // <script src="https://code.angularjs.org/snapshot/angular.js"></script> -->
     <script src="vendors/angular-animate/angular-animate.min.js"></script>
     <script src="vendors/angular-aria/angular-aria.min.js"></script>
     <script src="vendors/angular-material/angular-material.min.js"></script>
-    <script src="vendors/angular-route/angular-route.min.js"></script>
-    <!-- // <script src="vendors/angular-new-router/dist/router.es5.min.js"></script> -->
-    <!-- // <script src="vendors/angular-component-router/angular_1_router.js"></script> -->
     <script src="vendors/ngstorage/ngStorage.min.js"></script>
+    <script src="vendors/angular-base64-upload/dist/angular-base64-upload.min.js"></script>
     <!-- Custom -->
-    <script src="script.js"></script>
+    <script src="app.js"></script>
     <script src="components/home/home.js"></script>
     <script src="components/signin/signin.js"></script>
     <script src="components/signup/signup.js"></script>
